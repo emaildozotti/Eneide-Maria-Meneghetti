@@ -63,10 +63,11 @@ export default function EneideLanding() {
           >
             <div className="relative aspect-[4/5] w-full max-w-md mx-auto overflow-hidden rounded-[40px] shadow-2xl">
               <Image
-                src="https://picsum.photos/seed/eneide/800/1000"
+                src="https://i.imgur.com/taYavj1.jpeg"
                 alt="Eneide Carlot"
                 fill
-                className="object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                unoptimized
+                className="object-cover object-top grayscale-[20%] hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-earth/20 to-transparent" />
@@ -95,11 +96,11 @@ export default function EneideLanding() {
           </motion.h2>
           <motion.div
             {...fadeIn}
-            className="relative aspect-video bg-earth/5 rounded-[32px] overflow-hidden shadow-xl"
+            className="relative w-full max-w-sm mx-auto aspect-[9/16] bg-earth/5 rounded-[32px] overflow-hidden shadow-xl"
           >
             <iframe
               className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/L_LUpnjgPso?si=m_O7m9bWfJpK647v&amp;controls=0"
+              src="https://www.youtube.com/embed/-k5icnxn19Y?controls=0"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -162,57 +163,100 @@ export default function EneideLanding() {
       </section>
 
       {/* BLOCO 4: O MÉTODO */}
-      <section className="py-32 px-6 bg-earth text-sand relative overflow-hidden">
-        {/* Decorative background shape */}
-        <div className="absolute top-0 right-0 w-[60%] h-full bg-terracotta/10 blur-[100px] fluid-shape -z-0" />
+      <section className="py-32 md:py-40 px-6 bg-earth text-sand relative overflow-hidden flex flex-col justify-center">
+        {/* Sophisticated Animated Background */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-[-20%] right-[-10%] w-[70%] h-[70%] bg-terracotta/10 blur-[130px] rounded-full mix-blend-screen opacity-60 animate-pulse" style={{ animationDuration: '8s' }} />
+          <div className="absolute bottom-[-20%] left-[-10%] w-[60%] h-[60%] bg-gold/5 blur-[120px] rounded-full mix-blend-screen opacity-50 transition-transform duration-[10s]" />
+        </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <motion.div {...fadeIn}>
-              <h2 className="text-4xl md:text-6xl font-light mb-8 leading-tight">
-                Falar sobre a dor não é o suficiente. <br />
-                <span className="italic text-gold">É preciso curar a raiz.</span>
-              </h2>
-              <p className="text-xl text-sand/80 font-light mb-12 leading-relaxed">
-                Muitas vezes, a gente tenta &quot;seguir em frente&quot; apenas com a força de vontade, mas o corpo continua sofrendo.
-              </p>
+        <div className="max-w-7xl mx-auto relative z-10 w-full">
+          <div className="grid lg:grid-cols-12 gap-16 lg:gap-8 items-center">
 
-              <div className="space-y-8">
-                <div className="flex gap-6">
-                  <div className="w-12 h-12 rounded-full bg-terracotta/20 flex items-center justify-center shrink-0">
-                    <Wind className="w-6 h-6 text-terracotta" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-medium mb-2">Respiração Consciente</h4>
-                    <p className="text-sand/60 font-light">Para acalmar seu corpo físico e liberar tensões acumuladas.</p>
-                  </div>
-                </div>
-                <div className="flex gap-6">
-                  <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center shrink-0">
-                    <Sparkles className="w-6 h-6 text-gold" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-medium mb-2">Espiritualidade Divina</h4>
-                    <p className="text-sand/60 font-light">Para acalmar seu coração e reconectar com sua essência.</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
+            {/* Esquerda: Texto Principal */}
             <motion.div
               {...fadeIn}
-              className="bg-sand/5 backdrop-blur-sm p-12 rounded-[48px] border border-sand/10"
+              className="lg:col-span-6 pr-0 lg:pr-12"
             >
-              <p className="text-lg text-sand/90 font-light leading-relaxed mb-8">
-                Não vamos ficar apenas lembrando do que faz doer. Vamos limpar essa tristeza profunda para que você volte a sentir paz de verdade.
+              <div className="inline-flex items-center gap-3 mb-8">
+                <div className="w-8 h-[1px] bg-gold/50" />
+                <span className="uppercase tracking-[0.3em] text-xs font-semibold text-gold/80">O Método</span>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-light mb-8 leading-[1.2] tracking-tight">
+                Falar sobre a dor não é o suficiente.
+                <span className="block mt-3 font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-gold via-sand to-gold/70 pb-2">
+                  É preciso curar a raiz.
+                </span>
+              </h2>
+
+              <p className="text-lg md:text-xl text-sand/70 font-light mb-14 leading-relaxed max-w-lg">
+                Muitas vezes, tentamos &quot;seguir em frente&quot; apenas com a força de vontade, mas o corpo continua sofrendo. A verdadeira cura exige reconexão.
               </p>
-              <div className="bg-terracotta/20 p-8 rounded-3xl border border-terracotta/30">
-                <p className="text-2xl font-serif italic text-gold mb-2">O resultado?</p>
-                <p className="text-lg text-sand/80 font-light">
-                  O peso sai das costas, a angústia diminui e você reencontra a força para sorrir de novo.
-                </p>
+
+              <div className="space-y-12 relative">
+                {/* Linha conectora vertical */}
+                <div className="absolute left-[27px] top-8 bottom-8 w-[1px] bg-gradient-to-b from-terracotta/40 via-gold/30 to-transparent hidden md:block" />
+
+                <div className="flex gap-8 relative items-start">
+                  <div className="relative z-10 w-14 h-14 rounded-full bg-earth border border-terracotta/30 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(200,90,70,0.15)] group-hover:border-terracotta transition-colors">
+                    <div className="absolute inset-0 rounded-full bg-terracotta/10 animate-ping opacity-20" style={{ animationDuration: '3s' }} />
+                    <Wind className="w-5 h-5 text-terracotta" strokeWidth={1.5} />
+                  </div>
+                  <div className="pt-1">
+                    <h4 className="text-xl md:text-2xl font-serif mb-3 text-sand/90">Respiração Consciente</h4>
+                    <p className="text-sand/60 font-light leading-relaxed">Liberta as tensões acumuladas que prendem o seu corpo no ciclo da angústia e estresse constante.</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-8 relative items-start">
+                  <div className="relative z-10 w-14 h-14 rounded-full bg-earth border border-gold/30 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(220,180,100,0.15)] group-hover:border-gold transition-colors">
+                    <div className="absolute inset-0 rounded-full bg-gold/10 animate-ping opacity-20" style={{ animationDuration: '4s', animationDelay: '1s' }} />
+                    <Sparkles className="w-5 h-5 text-gold" strokeWidth={1.5} />
+                  </div>
+                  <div className="pt-1">
+                    <h4 className="text-xl md:text-2xl font-serif mb-3 text-sand/90">Espiritualidade Divina</h4>
+                    <p className="text-sand/60 font-light leading-relaxed">Acalma o seu coração, traz sentido e reconecta-se com a sua essência mais profunda.</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
+
+            {/* Direita: Elemento de Design "Glass" com Citação */}
+            <motion.div
+              {...fadeIn}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="lg:col-span-6 relative mt-12 lg:mt-0"
+            >
+              {/* Moldura / Glow */}
+              <div className="absolute -inset-1 bg-gradient-to-br from-terracotta/20 via-gold/10 to-transparent rounded-[2.5rem] blur-xl opacity-60 pointer-events-none" />
+
+              {/* Card Principal */}
+              <div className="relative w-full bg-gradient-to-br from-white/[0.07] to-white/[0.01] backdrop-blur-2xl p-10 md:p-14 rounded-[2rem] border border-white/10 shadow-2xl overflow-hidden group">
+
+                {/* Efeito de brilho interno */}
+                <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gold/10 blur-[60px] rounded-full transform translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+
+                <Quote className="w-10 h-10 text-terracotta/40 mb-8 transform -scale-x-100 relative z-10" />
+
+                <p className="text-2xl md:text-3xl text-sand/90 font-light leading-[1.5] mb-12 relative z-10">
+                  Não vamos ficar apenas lembrando do que faz doer. <span className="text-white font-normal drop-shadow-md">Vamos limpar essa tristeza profunda</span> para que você volte a sentir paz de verdade.
+                </p>
+
+                <div className="relative z-10">
+                  <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-gold/40 to-transparent" />
+                  <div className="pl-8 py-2">
+                    <p className="text-sm uppercase tracking-[0.2em] text-gold/80 font-bold mb-3">O Resultado</p>
+                    <p className="text-lg md:text-xl text-sand/80 font-serif italic leading-relaxed">
+                      &quot;O peso sai das costas, a angústia diminui e você reencontra a força e clareza para sorrir de novo.&quot;
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
@@ -228,9 +272,10 @@ export default function EneideLanding() {
           >
             <div className="aspect-[3/4] rounded-[60px] overflow-hidden shadow-2xl">
               <Image
-                src="https://picsum.photos/seed/eneide-story/800/1066"
+                src="https://i.imgur.com/7h7n9AE.jpeg"
                 alt="Eneide Carlot Story"
                 fill
+                unoptimized
                 className="object-cover"
                 referrerPolicy="no-referrer"
               />

@@ -19,6 +19,25 @@
   h1, h2, h3, h4, .font-serif {
     @apply font-serif;
   }
+
+  /* Elegant Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FDFCFB; /* sand */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D48166; /* terracotta */
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4A3728; /* earth */
+  }
 }
 
 .glass {
