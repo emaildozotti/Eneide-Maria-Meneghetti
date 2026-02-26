@@ -293,7 +293,7 @@ export default function EneideLanding() {
             </h2>
             <div className="space-y-6 text-lg text-earth/80 font-light leading-relaxed">
               <p>
-                Eu sou Eneide Carlot. Hoje ajudo muitas pessoas a se curarem, mas eu só consigo fazer isso porque eu também precisei de cura.
+                Eu sou Eneide Maria Meneghetti Carlot. Hoje ajudo muitas pessoas a se curarem, mas eu só consigo fazer isso porque eu também precisei de cura.
               </p>
               <p>
                 Eu vivi um amor lindo de 30 anos. De repente, em um instante, eu o perdi. O meu chão sumiu. A dor era tão grande que eu achei que não ia suportar.
